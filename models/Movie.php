@@ -21,6 +21,9 @@ class Movie {
         if ($title === "Taxi Driver") {
             $this->discount = 50;
         }
+        else{
+            $this->discount = 10;
+        }
     }
 
     public function getDiscount(){
