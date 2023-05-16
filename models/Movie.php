@@ -13,6 +13,7 @@ class Movie {
        $this->plot = $plot;
        $this->genre = $genre;
        $this->discount = $discount;
+      
 
     }
 
