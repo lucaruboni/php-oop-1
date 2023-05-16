@@ -38,7 +38,7 @@ require __DIR__ . '/db.php';
                 <h4 class="card-title"><?php echo $taxi_driver->title; ?></h4>
                 <p class="card-text"><?php echo $taxi_driver->plot; ?></p>
                 <p class="card-text"><?php echo $taxi_driver->genre->first_genre . ' ' . $taxi_driver->genre->second_genre ?></p>
-                <p class="card-text"><?php echo $taxi_driver->discount; ?></p>
+                <p class="card-text">discount: <?php echo $taxi_driver->discount; ?>%</p>
               </div>
             </div>
 
@@ -49,7 +49,7 @@ require __DIR__ . '/db.php';
                 <h4 class="card-title"><?php echo $non_e_un_paese_per_vecchi->title; ?></h4>
                 <p class="card-text"><?php echo $non_e_un_paese_per_vecchi->plot; ?></p>
                 <p class="card-text"><?php echo $non_e_un_paese_per_vecchi->genre->first_genre . ' ' . $non_e_un_paese_per_vecchi->genre->second_genre ?></p>
-                <p class="card-text"><?php echo $non_e_un_paese_per_vecchi->discount; ?></p>
+                <p class="card-text">discount: <?php echo $non_e_un_paese_per_vecchi->discount; ?>%</p>
               </div>
             </div>
         </div>
