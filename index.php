@@ -1,10 +1,32 @@
 <?php
 
+
+class Genre {
+    public $first_genre;
+    public $second_genre;
+
+    public function __construct($first_genre, $second_genre)
+    {
+        $this->first_genre = $first_genre;
+        $this->second_genre = $second_genre;
+    }
+}
+
+
+
 class Movie {
     public $title;
     public $plot;
     public $genre;
     public $discount = 0;
+
+    function __construct($title, $plot, $discount, Genre $genre)
+    {
+       $this->title = $title;
+       $this->plot = $plot;
+       $this->genre = $genre;
+       $this->discount = $discount;
+    }
 
     public function setDiscount($title){
         if ($title === "Taxi Driver") {
@@ -18,19 +40,13 @@ class Movie {
 }
 
 
-$taxi_driver = new Movie();
-$taxi_driver->title = "Taxi Driver";
-$taxi_driver->plot = "lorem ipsum dolor sit amet, non me lo ricordo più";
-$taxi_driver->genre = "Crime, Drama";
-$taxi_driver->setDiscount('Taxi Driver');
-$taxi_discount = $taxi_driver->getDiscount();
 
-$non_è_un_paese_per_vecchi = new Movie();
-$non_è_un_paese_per_vecchi->title = "No Country for old Men";
-$non_è_un_paese_per_vecchi->plot = "lorem ipsum dolor sit amet, non me lo ricordo più";
-$non_è_un_paese_per_vecchi->genre = "Crime, thriller";
-$non_è_un_paese_per_vecchi->setDiscount('No Country for old Men');
-$paese_discount = $non_è_un_paese_per_vecchi->getDiscount();
+$taxi_driver = new Movie('Taxi Driver', 'lorem ipsum dolor sit amet, non me lo ricordo più', new Genre('Crime', 'drama'), setDiscount('Taxi Driver'), getDiscount());
+
+
+
+$non_è_un_paese_per_vecchi = new Movie('Np Country for old Men', 'lorem ipsum dolor sit amet, non me lo ricordo più', new Genre('Crime', 'Thriller'),setDiscount('No Country for old Men'), getDiscount());
+
 
 var_dump($taxi_driver);
 var_dump($non_è_un_paese_per_vecchi);
