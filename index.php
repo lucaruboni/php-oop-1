@@ -10,10 +10,26 @@ require __DIR__ . '/db.php';
 <head>
     <style>
         header{
-            background: red;
+            background-color: red;
+            box-shadow: 0 0 20px black;
+            height: 100px;
+            position: sticky;
+             top: 0;
+             left: 0;
+             z-index: 100;
+
+       
         }
         main{
             background-color: grey;
+        }
+        .my_card{
+            box-shadow: 0 5px 15px black;
+        }
+        .my_head{
+            font-weight: 900;
+             color: black;
+             
         }
     </style>
     <meta charset="UTF-8">
@@ -24,15 +40,15 @@ require __DIR__ . '/db.php';
 </head>
 <body>
 
-  <header class="py-5">
-    <h1 class="text-center">MY FILM LIST</h1>
+  <header class="py-5 d-flex">
+    <h1 class="my_head text-center align-self-center ms-5">MY FILM LIST</h1>
   </header>
 
   <main>
     <div class="container">
         <div class="row pt-5 gap-5">
 
-            <div class="card border-primary">  
+            <div class="my_card card border-primary">  
               <img class="card-img-top pt-2" src="https://www.themoviedb.org/t/p/original/5MVSXJieOhbyZudCnV1H4YJpfPV.jpg" alt="">
               <div class="card-body">
                 <h4 class="card-title"><?php echo $taxi_driver->title; ?></h4>
@@ -43,7 +59,7 @@ require __DIR__ . '/db.php';
             </div>
 
 
-            <div class="card border-primary mb-5">  
+            <div class="my_card card border-primary mb-5">  
               <img class="card-img-top pt-2" src="https://www.themoviedb.org/t/p/original/kd9jFTTabg4xJpHDgxY0h8F9BzG.jpg" alt="">
               <div class="card-body">
                 <h4 class="card-title"><?php echo $non_e_un_paese_per_vecchi->title; ?></h4>
